@@ -128,3 +128,18 @@ In the preview pane on the right, click the preview play button to ensure your s
 3) Run `npm install`
 4) To start the project, run `npm start`
 5) create dotenv file and paste required specifications
+
+## Environment
+NODE_ENV=development
+
+PORT=3001
+
+JET_LOGGER_MODE=CONSOLE
+JET_LOGGER_FILEPATH=jet-logger.log
+JET_LOGGER_TIMESTAMP=TRUE
+JET_LOGGER_FORMAT=LINE
+
+API_KEY=[YOUR BRIGHT DATA API KEY]
+COLLECTOR_ID=[YOUR BRIGHT DATA COLLECTOR ID]
+
+DB_CONNECTION_STRING=mongodb://localhost:27017 [YOUR MONGO DB CONNECTION STRING]
