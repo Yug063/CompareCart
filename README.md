@@ -29,4 +29,8 @@ Screenshot 3.*
 - **TypeScript**
 - **Express**
 
-
+## ▶ Getting Started
+1) Clone this repository
+2) `cd` into the 'client' folder
+3) Run `npm install`
+4) To start the project, run `npm start`
