@@ -21,15 +21,12 @@ Screenshot 3.*
 
 ## Tech Stack
 
-- **Python 3.x:** The core language for building the web scraping logic.
-- **Beautiful Soup:** A Python library for pulling data out of HTML and XML files.
-- **Requests:** HTTP library for making requests to the e-commerce websites.
-- **Flask:** Web framework for building the application.
-- **Bright Data API:** Integration for efficient and ethical web scraping.
+- **Bright Data**
+- **ReactJS**
+- **MaterialUI**
+- **MongoDB**
+- **NodeJs**
+- **TypeScript**
+- **Express**
 
-## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/web-scraping-application.git
-   cd web-scraping-application
