@@ -29,6 +29,93 @@ Screenshot 3.*
 - **TypeScript**
 - **Express**
 
+## Bright Data
+
+In the `Interaction Code` editor, paste the following code:
+```
+// Selecting a country for proxy
+country(input.country || 'us');
+const runningProducts = [];
+const amazonURL = 'https://www.amazon.com/s?s=price-desc-ranks&k='
+const ebayURL ='https://www.ebay.com/sch/i.html?_nkw='
+const neweggURL = 'https://www.newegg.com/p/pl?d='
+
+// Navigation to the target page
+navigate(`${amazonURL}${input.keyword}`);
+const { amazonProducts } = parse();
+
+navigate(`${ebayURL}${input.keyword}`);
+let { ebayProducts } = parse();
+ebayProducts = ebayProducts.slice(1);
+
+navigate(`${neweggURL}${input.keyword}`);
+let { neweggProducts } = parse();
+
+collect({ keyword: input.keyword, products: [...amazonProducts, ...ebayProducts, ...neweggProducts]});
+```
+
+In the `Parser Code` section, paste the following code:
+```
+return {
+    amazonProducts: $('[data-component-type="s-search-result"]').toArray().map(el=>{
+    let $el = $(el);
+    let title_el = $(el).find('h2 a.a-text-normal').eq(0);
+    let name_el = title_el.find('span').eq(0);
+    let image_el = $(el)
+    .find('span[data-component-type="s-product-image"] img').eq(0);
+    let price_el = $(el).find('.a-price:not([data-a-strike])').eq(0);
+    let parse_price = el=>{
+      let price = $(el).find('.a-offscreen').eq(0).text();
+      return parseFloat(price.replace(/^\D+/, '').replace(/,/g, ''));
+    };
+    return {
+      title: name_el.text().replace('\n', '').trim(),
+      url: new URL($el.find('[data-component-type="s-product-image"]').find('a').attr('href'), location.href),
+      price: parse_price(price_el),
+      image: image_el.attr('src'),
+      competitor: 'Amazon'
+    };
+  }),
+  neweggProducts: $('.item-cells-wrap .item-cell').toArray().map(el => {
+    let image_el = $(el).find('img').eq(0);
+    let name_el = $(el).find('.item-title').eq(0)    
+    let price_el = $(el).find('.price-current').eq(0)
+    let parse_price = el=>{
+      let price = $(el).text();
+      return parseFloat(price.replace(/^\D+/, '').replace(/,/g, ''));
+    };
+    
+    return {
+      title: name_el.text().replace('\n', '').trim(),
+      url: new URL(location.href),
+      price: parse_price(price_el),
+      image: image_el.attr('src'),
+      competitor: 'newegg'
+    };
+  }),
+  ebayProducts: $('.s-item__wrapper').toArray().map(el=>{
+    let $el = $(el);
+    let image_el = $(el).find('.s-item__image-section img').eq(0);
+    let name_el = $(el).find('.s-item__info .s-item__title span').eq(0)    
+    let price_el = $(el).find('.s-item__details .s-item__price').eq(0)
+    let parse_price = el=>{
+      let price = $(el).text();
+      return parseFloat(price.replace(/^\D+/, '').replace(/,/g, ''));
+    };
+    
+    return {
+      title: name_el.text().replace('\n', '').trim(),
+      url: new URL(location.href),
+      price: parse_price(price_el),
+      image: image_el.attr('src'),
+      competitor: 'ebay'
+    };
+  })
+}
+```
+
+In the preview pane on the right, click the preview play button to ensure your scraper code is working correctly.
+
 ## ▶ Getting Started
 1) Clone this repository
 2) `cd` into the 'client' folder
