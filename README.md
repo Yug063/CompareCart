@@ -129,7 +129,7 @@ In the preview pane on the right, click the preview play button to ensure your s
 4) To start the project, run `npm start`
 5) create dotenv file and paste required specifications
 
-## Environment
+## Environment (dotenv)
 **NODE_ENV=development**
 
 **PORT=3001**
