@@ -142,4 +142,4 @@ In the preview pane on the right, click the preview play button to ensure your s
 **API_KEY=[YOUR BRIGHT DATA API KEY]**
 **COLLECTOR_ID=[YOUR BRIGHT DATA COLLECTOR ID]**
 
-**DB_CONNECTION_STRING=mongodb://localhost:27017 [YOUR MONGO DB CONNECTION STRING] **
+**DB_CONNECTION_STRING=mongodb://localhost:27017 [YOUR MONGO DB CONNECTION STRING]**
