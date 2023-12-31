@@ -116,8 +116,15 @@ return {
 
 In the preview pane on the right, click the preview play button to ensure your scraper code is working correctly.
 
-## ▶ Getting Started
+## ▶ Getting Started with frontend
 1) Clone this repository
 2) `cd` into the 'client' folder
 3) Run `npm install`
 4) To start the project, run `npm start`
+
+## ▶ Getting Started with backend
+1) Clone this repository
+2) `cd` into the 'server' folder
+3) Run `npm install`
+4) To start the project, run `npm start`
+5) create dotenv file and paste required specifications
