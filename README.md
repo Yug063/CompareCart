@@ -2,6 +2,8 @@
 
 This web scraping application utilizes Bright Data to gather pricing information from popular e-commerce platforms such as eBay, Newegg, and Amazon. The collected data is then displayed to provide users with a convenient way to compare prices for a specific product.
 
+## Live URL
+https://compare-cart-123.netlify.app/
 ## Screenshots
 *Screenshot 1*
 ![Screenshot 1](![image](https://github.com/Yug063/CompareCart/assets/99280006/004a0ba0-6e26-4d96-8f07-b7e9816d7f88)
