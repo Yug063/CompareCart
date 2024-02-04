@@ -6,13 +6,13 @@ This web scraping application utilizes Bright Data to gather pricing information
 https://compare-cart-123.netlify.app/
 ## Screenshots
 *Screenshot 1*
-![Screenshot 1](![image](https://github.com/Yug063/CompareCart/assets/99280006/004a0ba0-6e26-4d96-8f07-b7e9816d7f88)
+(![image](https://github.com/Yug063/CompareCart/assets/99280006/004a0ba0-6e26-4d96-8f07-b7e9816d7f88)
 
 Screenshot 2.*
-![Screenshot 2](![image](https://github.com/Yug063/CompareCart/assets/99280006/2754b3c9-c44a-4112-975d-13097375ab12)
+(![image](https://github.com/Yug063/CompareCart/assets/99280006/2754b3c9-c44a-4112-975d-13097375ab12)
 
 Screenshot 3.*
-![Screenshot 2](![image](https://github.com/Yug063/CompareCart/assets/99280006/2425418b-9a5b-4399-aaab-9c3c7099980c)
+(![image](https://github.com/Yug063/CompareCart/assets/99280006/2425418b-9a5b-4399-aaab-9c3c7099980c)
 
 
 ## Features
